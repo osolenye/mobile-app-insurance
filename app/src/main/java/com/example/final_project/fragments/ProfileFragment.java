@@ -3,6 +3,7 @@ package com.example.final_project.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -10,6 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.final_project.R;
+import com.example.final_project.items.MyAdapter;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,7 +36,7 @@ public class ProfileFragment extends Fragment {
 
 
     private RecyclerView recyclerView;
-//    private MyAdapter adapter;
+    private MyAdapter adapter;
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -67,8 +73,29 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+//        return inflater.inflate(R.layout.fragment_profile, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        List<String> data = Arrays.asList("Item 1", "Item 2", "Item 3"); // Пример данных
+        MyAdapter adapter = new MyAdapter(data);
+        recyclerView.setAdapter(adapter);
+
+        return view;
+    }
 
 
+    private List<String> createDummyData() {
+        // Здесь вы можете создать и вернуть список данных для вашего RecyclerView
+        // Например, если у вас есть список строк:
+        List<String> data = new ArrayList<>();
+        data.add("Item 1");
+        data.add("Item 2");
+        data.add("Item 3");
+        // и так далее
+        return data;
     }
 }
