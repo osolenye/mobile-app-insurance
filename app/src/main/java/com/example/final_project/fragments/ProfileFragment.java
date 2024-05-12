@@ -2,6 +2,7 @@ package com.example.final_project.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,9 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import com.example.final_project.R;
 import com.example.final_project.items.MyAdapter;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,6 +37,13 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private AppCompatButton dropdown_open;
+    private LinearLayout dropdown_content;
+    private AppCompatButton dropdown_close;
+
+    private MaterialButton button_processed_requests;
+    private MaterialButton button_unprocessed_requests;
 
 
 
@@ -67,6 +79,7 @@ public class ProfileFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+
     }
 
     @Override
@@ -77,12 +90,53 @@ public class ProfileFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         List<String> data = Arrays.asList("Item 1", "Item 2", "Item 3"); // Пример данных
         MyAdapter adapter = new MyAdapter(data);
         recyclerView.setAdapter(adapter);
+
+        dropdown_open = view.findViewById(R.id.dropdown_open_button);
+        dropdown_content = view.findViewById(R.id.dropdown_content);
+        dropdown_close = view.findViewById(R.id.dropdown_close);
+
+        dropdown_open.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dropdown_open.setVisibility(View.GONE);
+                dropdown_content.setVisibility(View.VISIBLE);
+                dropdown_close.setVisibility(View.VISIBLE);
+            }
+        });
+        dropdown_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dropdown_open.setVisibility(View.VISIBLE);
+                dropdown_content.setVisibility(View.GONE);
+                dropdown_close.setVisibility(View.GONE);
+            }
+        });
+
+        button_processed_requests = view.findViewById(R.id.button_processed_requests);
+        button_unprocessed_requests = view.findViewById(R.id.button_unprocessed_requests);
+        button_processed_requests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeButtonGreen(button_processed_requests);
+                changeButtonWhite(button_unprocessed_requests);
+            }
+        });
+        button_unprocessed_requests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeButtonGreen(button_unprocessed_requests);
+                changeButtonWhite(button_processed_requests);
+            }
+        });
+
+
 
         return view;
     }
@@ -98,4 +152,15 @@ public class ProfileFragment extends Fragment {
         // и так далее
         return data;
     }
+
+
+    private void changeButtonGreen(MaterialButton button) {
+        button.setBackgroundColor(getResources().getColor(R.color.background_green));
+        button.setTextColor(getResources().getColor(R.color.background_yellow));
+    }
+    private void changeButtonWhite(MaterialButton button) {
+        button.setBackgroundColor(getResources().getColor(R.color.white));
+        button.setTextColor(getResources().getColor(R.color.black));
+    }
+
 }

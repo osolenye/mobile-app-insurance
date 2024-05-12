@@ -29,11 +29,11 @@
             android:text="133713371337" />
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinner"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dropdown_open_button"
         android:layout_width="32dp"
         android:layout_height="28dp"
-        android:layout_marginLeft="146dp"
+        android:layout_marginStart="146dp"
         android:layout_marginTop="-10dp"
         android:background="@drawable/button_dropdown_open"
         />
@@ -44,7 +44,9 @@
         android:background="@drawable/container_profile_functions"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:id="@+id/dropdown_content"
+        android:visibility="gone"
+        >
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
@@ -73,28 +75,30 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="323dp"
         android:layout_height="20dp"
+        android:id="@+id/dropdown_close"
         android:background="@drawable/button_dropdown_close"
+        android:layout_marginTop="-6dp"
         android:visibility="gone"/>
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="212dp"
-        android:layout_height="28dp"
+        android:layout_height="36dp"
         android:backgroundTint="@color/background_green"
         app:cornerRadius="12dp"
         android:text="Обработанные заявки"
-        android:textSize="8sp"
+        android:id="@+id/button_processed_requests"
         android:textColor="@color/background_yellow"
         />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="212dp"
-        android:layout_height="28dp"
+        android:layout_height="36dp"
         android:backgroundTint="@color/white"
         app:strokeColor="@color/black"
         app:cornerRadius="12dp"
         android:text="Необработанные заявки"
+        android:id="@+id/button_unprocessed_requests"
         android:textColor="@color/black"
-        android:textSize="8sp"
         />
 
 
