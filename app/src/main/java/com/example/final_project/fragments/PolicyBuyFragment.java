@@ -7,17 +7,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import com.example.final_project.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BuyDmsFragment#newInstance} factory method to
+ * Use the {@link PolicyBuyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BuyDmsFragment extends Fragment {
+public class PolicyBuyFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,10 +26,7 @@ public class BuyDmsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-
-    private Spinner tariffSpinner;
-
-    public BuyDmsFragment() {
+    public PolicyBuyFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +36,11 @@ public class BuyDmsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BuyDmsFragment.
+     * @return A new instance of fragment PolicyBuyFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BuyDmsFragment newInstance(String param1, String param2) {
-        BuyDmsFragment fragment = new BuyDmsFragment();
+    public static PolicyBuyFragment newInstance(String param1, String param2) {
+        PolicyBuyFragment fragment = new PolicyBuyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,14 +60,7 @@ public class BuyDmsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_buy_dms, container, false);
-
-        tariffSpinner = view.findViewById(R.id.spinner_tariffs);
-        String[] data = {"Option 1", "Option 2", "Option 3"};
-        // Создаем адаптер для Spinner
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, data);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        tariffSpinner.setAdapter(adapter);
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_policy_buy, container, false);
     }
 }
