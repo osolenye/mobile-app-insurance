@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.example.final_project.fragments.BuyDmsFragment;
 import com.example.final_project.fragments.CompaniesFragment;
 import com.example.final_project.fragments.ProfileFragment;
+import com.example.final_project.fragments.VzrFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         // Replace the container with the fragment
-        fragmentTransaction.replace(R.id.container, new BuyDmsFragment());
+        fragmentTransaction.replace(R.id.container, new VzrFragment());
 
         // Commit the transaction
         fragmentTransaction.commit();

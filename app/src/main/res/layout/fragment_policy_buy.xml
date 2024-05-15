@@ -46,7 +46,7 @@
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="40dp"
-                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"
+                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -80,7 +80,7 @@
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="40dp"
-                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"
+                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг" />
         </LinearLayout>
     </LinearLayout>
 
@@ -114,7 +114,7 @@
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="40dp"
-                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"
+                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -148,7 +148,7 @@
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="40dp"
-                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"
+                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -182,7 +182,7 @@
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="40dp"
-                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"
+                android:text="Текст Криптогра́фия — наука о методах обеспечения ввапатьбг"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AutoInsuranceFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Покупка ДМС"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        />
+
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:background="@color/background_green"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        >
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Страхователь является собственником"
+            android:textColor="@color/white"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Застраховано в других СК"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Марка"
+            />
+
+
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Модель"
+            />
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Год выпуска"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <EditText
+            android:layout_width="144dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Дата начала"
+            />
+            <EditText
+                android:layout_width="144dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Дата конца"
+                />
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/spinner_allowed_drivers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Терротрия страхования"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:background="@drawable/button_yellow"
+            android:text="lksajdf"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="250dp"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
