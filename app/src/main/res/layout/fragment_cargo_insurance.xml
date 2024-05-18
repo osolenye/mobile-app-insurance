@@ -1,14 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".fragments.CargoInsuranceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Покупка ДМС"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/background_green"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Марка" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Груз новый"
+            android:textColor="@color/white" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="груз хрупкий"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="93dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Марка" />
+
+            <EditText
+                android:layout_width="93dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Марка" />
+
+            <EditText
+                android:layout_width="93dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Марка" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Объем груза" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="145dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Модель" />
+
+            <EditText
+                android:layout_width="145dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Модель" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Модель" />
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Модель" />
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Модель" />
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Модель" />
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounded_corner"
+            android:hint="Модель" />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="144dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Дата начала" />
+
+            <EditText
+                android:layout_width="144dp"
+                android:layout_height="36dp"
+                android:background="@drawable/rounded_corner"
+                android:hint="Дата конца" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/button_yellow"
+            android:text="lksajdf"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
